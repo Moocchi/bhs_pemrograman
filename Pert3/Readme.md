@@ -7,17 +7,6 @@
 Jupyter notebook digunakan untuk membuat dokumen notebook interaktif yang mencantum live code, persamaan, visualisai, media dan komputasi lainnya.
 Dan Membuat simple code cpp yaitu
 
-''' cpp
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    cout << "Iqbal Ganteng";
-    return 0;
-}
-'''
-
 simple nya, buat Memo ?
 
 # SCREENSHOT 
