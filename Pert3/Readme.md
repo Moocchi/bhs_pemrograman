@@ -1,6 +1,6 @@
-# PERTEMUAN 3 
+# PERTEMUAN 3
 
-*Pada pertemuan 3 hanya belajar menginstall g++ dan gcc di linux agar bisa menjalankan atau running file cpp dan c di ubuntu terminal :)*
+_Pada pertemuan 3 hanya belajar menginstall g++ dan gcc di linux agar bisa menjalankan atau running file cpp dan c di ubuntu terminal :)_
 
 # PENGENALAN JUPYTER NOTEBOOK DAN CODE CPP
 
@@ -18,15 +18,16 @@ int main()
 }
 ```
 
+simple nya, buat Memo gais
 
-simple nya, buat Memo ?
+# SCREENSHOT
 
-# SCREENSHOT 
 bukti ?, ini buktinya ↓↓↓↓↓↓↓
+
 ## SCREENSHOT 1
 
-![alt text](https://github.com/Moocchi/bhs_pemrograman/blob/main/Pert3/Screenshot%20(551).png)
+![alt text](<https://github.com/Moocchi/bhs_pemrograman/blob/main/Pert3/Screenshot%20(551).png>)
 
 ## SCREENSHOT 2
 
-![alt text](https://github.com/Moocchi/bhs_pemrograman/blob/main/Pert3/Screenshot%20(553).png)
+![alt text](<https://github.com/Moocchi/bhs_pemrograman/blob/main/Pert3/Screenshot%20(553).png>)
