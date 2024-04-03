@@ -2,11 +2,23 @@
 
 *Pada pertemuan 3 hanya belajar menginstall g++ dan gcc di linux agar bisa menjalankan atau running file cpp dan c di ubuntu terminal :)*
 
-# PENGENALAN JUPYTER NOTEBOOK
+# PENGENALAN JUPYTER NOTEBOOK DAN CODE CPP
 
 Jupyter notebook digunakan untuk membuat dokumen notebook interaktif yang mencantum live code, persamaan, visualisai, media dan komputasi lainnya.
+Dan Membuat simple code cpp yaitu
 
-simple nya, buat catatan ?
+''' cpp
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Iqbal Ganteng";
+    return 0;
+}
+'''
+
+simple nya, buat Memo ?
 
 # SCREENSHOT 
 bukti ?, ini buktinya ↓↓↓↓↓↓↓
