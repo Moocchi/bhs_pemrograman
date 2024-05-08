@@ -1,0 +1,17 @@
+@startuml sample 
+
+left to right direction
+skinparam PackageFontStyle rect
+actor user
+rectangle program{
+    user -- (menu)
+    (menu) .> (choice 1): Extends
+    (menu) .> (choice 2): Extends
+    (choice 2).>(exit)
+    (choice 1).>(input Nama Depan)
+    (input Nama Depan)._> (input Nama Tengah) : include
+    (input Nama Tengah)._>(input Nama Belakang) : include
+    (input Nama Belakang)._>(wewew) 
+}
+
+@enduml
