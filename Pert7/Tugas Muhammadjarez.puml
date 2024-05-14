@@ -1,44 +1,71 @@
-@startuml menu_makan
+@startuml MenuMakan
 
-left to right direction
+start
 
-actor user
+:initialize Variables;
+while (True) is (menu != 3)
 
-rectangle MenuMakan {
-    user -- (menu)
+    :Display Main Menu;
+    :Get User Input (menu);
 
-    (menu) --> (choice 1) : pilih
-    (menu) --> (choice 2) : pilih
-    (menu) --> (choice 3) : pilih
-    
-    (choice 1) --> (Menu Makanan) : include
-    (choice 2) --> (Menu Minuman) : include
-    (choice 3) --> (exit)
-    
-    (Menu Makanan) --> (Pecel Lele) : pilih
-    (Menu Makanan) --> (Nasi Goreng) : pilih
-    (Menu Makanan) --> (Kembali Makanan) : pilih
-    (Kembali Makanan) --> (menu) : return
-    
-    (Menu Minuman) --> (Air Putih) : pilih
-    (Menu Minuman) --> (Es Teh) : pilih
-    (Menu Minuman) --> (Kembali Minuman) : pilih
-    (Kembali Minuman) --> (menu) : return
-    
-    (Pecel Lele) --> (input jumlah Pecel Lele) : input
-    (Nasi Goreng) --> (input jumlah Nasi Goreng) : input
-    (Air Putih) --> (input jumlah Air Putih) : input
-    (Es Teh) --> (input jumlah Es Teh) : input
-    
-    (input jumlah Pecel Lele) --> (total Pecel Lele) : total
-    (input jumlah Nasi Goreng) --> (total Nasi Goreng) : total
-    (input jumlah Air Putih) --> (total Air Putih) : total
-    (input jumlah Es Teh) --> (total Es Teh) : total
-    
-    (total Pecel Lele) --> (menu) : return
-    (total Nasi Goreng) --> (menu) : return
-    (total Air Putih) --> (menu) : return
-    (total Es Teh) --> (menu) : return
-}
+    if (menu == 1) then (Makanan)
+        :Display Makanan Menu;
+        :Get User Input (makanan);
+        
+        if (makanan == 1) then (Pecel Lele)
+            :Pecel Lele : Rp. 17.000;
+            :Get Input jumlah_lele;
+            :pesan_pecel += jumlah_lele;
+            :total += jumlah_lele * pecel_lele;
+            :Jumlah Pecel Lele: {pesan_pecel};
+            :Total sementara: Rp. {total:,};
+        else if (makanan == 2) then (Nasi Goreng)
+            :Nasi Goreng : Rp. 12.000;
+            :Get Input jumlah_nasgor;
+            :pesan_nasgor += jumlah_nasgor;
+            :total += jumlah_nasgor * nasi_goreng;
+            :Jumlah Nasi Goreng: {pesan_nasgor};
+            :Total sementara: Rp. {total:,};
+        else if (makanan == 3) then (Kembali)
+            :Return to Main Menu;
+        else
+            :Display "Pilihan tidak valid";
+        endif
+
+    else if (menu == 2) then (Minuman)
+        :Display Minuman Menu;
+        :Get User Input (minum);
+
+        if (minum == 1) then (Air Putih)
+            :Air Putih : Rp. 2.000;
+            :Get Input jumlah_air;
+            :pesan_air += jumlah_air;
+            :total += jumlah_air * air_putih;
+            :Jumlah Air Putih: {pesan_air};
+            :Total sementara: Rp. {total:,};
+        else if (minum == 2) then (Es Teh)
+            :Es Teh : Rp. 5.000;
+            :Get Input jumlah_esteh;
+            :pesan_esteh += jumlah_esteh;
+            :total += jumlah_esteh * es_teh;
+            :Jumlah Es Teh: {pesan_esteh};
+            :Total sementara: Rp. {total:,};
+        else if (minum == 3) then (Kembali)
+            :Return to Main Menu;
+        else
+            :Display "Pilihan tidak valid";
+        endif
+
+    else if (menu == 3) then (Exit)
+        :Sampai jumpa :;
+        stop
+    else
+        :Display "Pilihan tidak valid";
+    endif
+
+endwhile
+
+:Display "EXIT";
+stop
 
 @enduml
