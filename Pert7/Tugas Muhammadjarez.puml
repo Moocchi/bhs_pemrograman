@@ -1,0 +1,44 @@
+@startuml menu_makan
+
+left to right direction
+
+actor user
+
+rectangle MenuMakan {
+    user -- (menu)
+
+    (menu) --> (choice 1) : pilih
+    (menu) --> (choice 2) : pilih
+    (menu) --> (choice 3) : pilih
+    
+    (choice 1) --> (Menu Makanan) : include
+    (choice 2) --> (Menu Minuman) : include
+    (choice 3) --> (exit)
+    
+    (Menu Makanan) --> (Pecel Lele) : pilih
+    (Menu Makanan) --> (Nasi Goreng) : pilih
+    (Menu Makanan) --> (Kembali Makanan) : pilih
+    (Kembali Makanan) --> (menu) : return
+    
+    (Menu Minuman) --> (Air Putih) : pilih
+    (Menu Minuman) --> (Es Teh) : pilih
+    (Menu Minuman) --> (Kembali Minuman) : pilih
+    (Kembali Minuman) --> (menu) : return
+    
+    (Pecel Lele) --> (input jumlah Pecel Lele) : input
+    (Nasi Goreng) --> (input jumlah Nasi Goreng) : input
+    (Air Putih) --> (input jumlah Air Putih) : input
+    (Es Teh) --> (input jumlah Es Teh) : input
+    
+    (input jumlah Pecel Lele) --> (total Pecel Lele) : total
+    (input jumlah Nasi Goreng) --> (total Nasi Goreng) : total
+    (input jumlah Air Putih) --> (total Air Putih) : total
+    (input jumlah Es Teh) --> (total Es Teh) : total
+    
+    (total Pecel Lele) --> (menu) : return
+    (total Nasi Goreng) --> (menu) : return
+    (total Air Putih) --> (menu) : return
+    (total Es Teh) --> (menu) : return
+}
+
+@enduml
