@@ -1,0 +1,32 @@
+@startuml Soal no 7
+
+left to right direction
+skinparam packageStyle rect
+
+actor User
+rectangle Program {
+    User -- (Menu)
+    (Menu) .> (Tambah) : Extends
+    (Menu) .> (Kurang) : Extends
+    (Menu) .> (Kali) : Extends
+    (Menu) .> (Bagi) : Extends
+    (Menu) .> (Keluar) : Extends
+
+    (Tambah) --> (Input Angka)
+    (Input Angka) --> (Tampilkan Hasil Tambah)
+
+    (Kurang) --> (Input Angka)
+    (Input Angka) --> (Tampilkan Hasil Kurang)
+
+    (Kali) --> (Input Angka)
+    (Input Angka) --> (Tampilkan Hasil Kali)
+
+    (Bagi) --> (Input Angka)
+    (Input Angka) --> (Cek Pembagi Nol)
+    (Cek Pembagi Nol) --> (Tampilkan Hasil Bagi) : include
+    (Cek Pembagi Nol) --> (Tampilkan Error) : include
+
+    (Keluar) --> (Tampilkan Pesan Keluar)
+}
+
+@enduml
