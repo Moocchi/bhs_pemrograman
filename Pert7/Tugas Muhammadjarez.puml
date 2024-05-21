@@ -1,71 +1,26 @@
-@startuml MenuMakan
+@startuml
 
-start
+actor user
 
-:initialize Variables;
-while (True) is (menu != 3)
+participant "Menu" as M
+participant "Pilih Menu" as pil
+participant "Aku" as A
+participant "Dia" as D
+participant "Quantity" as qty
+participant "Total" as tot
+participant "Exit" as X
 
-    :Display Main Menu;
-    :Get User Input (menu);
-
-    if (menu == 1) then (Makanan)
-        :Display Makanan Menu;
-        :Get User Input (makanan);
-        
-        if (makanan == 1) then (Pecel Lele)
-            :Pecel Lele : Rp. 17.000;
-            :Get Input jumlah_lele;
-            :pesan_pecel += jumlah_lele;
-            :total += jumlah_lele * pecel_lele;
-            :Jumlah Pecel Lele: {pesan_pecel};
-            :Total sementara: Rp. {total:,};
-        else if (makanan == 2) then (Nasi Goreng)
-            :Nasi Goreng : Rp. 12.000;
-            :Get Input jumlah_nasgor;
-            :pesan_nasgor += jumlah_nasgor;
-            :total += jumlah_nasgor * nasi_goreng;
-            :Jumlah Nasi Goreng: {pesan_nasgor};
-            :Total sementara: Rp. {total:,};
-        else if (makanan == 3) then (Kembali)
-            :Return to Main Menu;
-        else
-            :Display "Pilihan tidak valid";
-        endif
-
-    else if (menu == 2) then (Minuman)
-        :Display Minuman Menu;
-        :Get User Input (minum);
-
-        if (minum == 1) then (Air Putih)
-            :Air Putih : Rp. 2.000;
-            :Get Input jumlah_air;
-            :pesan_air += jumlah_air;
-            :total += jumlah_air * air_putih;
-            :Jumlah Air Putih: {pesan_air};
-            :Total sementara: Rp. {total:,};
-        else if (minum == 2) then (Es Teh)
-            :Es Teh : Rp. 5.000;
-            :Get Input jumlah_esteh;
-            :pesan_esteh += jumlah_esteh;
-            :total += jumlah_esteh * es_teh;
-            :Jumlah Es Teh: {pesan_esteh};
-            :Total sementara: Rp. {total:,};
-        else if (minum == 3) then (Kembali)
-            :Return to Main Menu;
-        else
-            :Display "Pilihan tidak valid";
-        endif
-
-    else if (menu == 3) then (Exit)
-        :Sampai jumpa :;
-        stop
-    else
-        :Display "Pilihan tidak valid";
-    endif
-
-endwhile
-
-:Display "EXIT";
-stop
+user --> M: Tampilkan Menu Utama
+M --> pil: Pilih Menu 1 atau 2, Pilih Aku atau Dia
+pil --> A: Menampilkan Profil Aku
+A --> qty: Masukkan Jumlah Quantity
+qty --> tot: Print
+M <-- tot: Kembali ke Menu
+tot --> X: jika tidak memilih kembali ke menu
+pil --> D: Menampilkan Profil Dia
+D --> qty: Masukkan Jumlah Quantity
+qty --> tot: Print
+M <-- tot: Kembali ke Menu
+tot --> X: jika tidak memilih kembali ke menu
 
 @enduml
