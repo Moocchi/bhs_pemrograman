@@ -1,0 +1,25 @@
+@startuml Business Design Service Application
+
+actor User
+
+rectangle "Business Design Service Application" {
+    User --> (Tampilkan Penyedia jasa)
+    User --> (Tambah Pesanan Jasa)
+    User --> (Tampilkan Pembayaran)
+}
+
+rectangle "Data Desainer" {
+    (desainers) --> (Markus)
+    (desainers) --> (Bobi)
+    (desainers) --> (Alice)
+    (desainers) --> (Charlie)
+    (desainers) --> (David)
+}
+
+rectangle "Pesanan" {
+    (pesanan) --> (Pesanan 1..n)
+}
+
+User --> (Exit)
+
+@enduml
