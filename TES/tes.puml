@@ -1,0 +1,21 @@
+@startuml Aplikasi Pemesanan Makanan Sehat
+
+actor User
+
+rectangle "Food Ordering System" {
+    User --> (Register)
+    User --> (Login)
+    User --> (Tampilkan Menu)
+    User --> (Buat Orderan)
+    User --> (Tampilkan Orders)
+}
+
+rectangle "Database" {
+    (Register) --> (menyimpan data user)
+    (Login) --> (verifikasi user)
+    (Tampilkan Menu) --> (tampilkan menu makanan)
+    (Buat Orderan) --> (simpan orderan user)
+    (Tampilkan Orders) --> (tampilkan orderan user)
+}
+
+@enduml
