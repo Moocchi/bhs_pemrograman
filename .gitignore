@@ -1,4 +1,4 @@
-/Pert9/db/mariadb/*
-/Pert9/db/mongodb/*
-/Pert9/db/postgres/*
-/Pert9/db/redis/*
+/bhs_pemrograman/Pert9/db/mariadb/*
+/bhs_pemrograman/Pert9/db/mongo/*
+/bhs_pemrograman/Pert9/db/postgres/*
+/bhs_pemrograman/Pert9/db/redis/*
