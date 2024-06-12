@@ -2,4 +2,3 @@ mariadb/
 mongo/
 postgres/
 redis/
-TES/*
