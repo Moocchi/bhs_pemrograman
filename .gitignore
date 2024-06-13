@@ -2,3 +2,6 @@ mariadb/
 mongo/
 postgres/
 redis/
+mysql/
+performance_schema/
+data/
