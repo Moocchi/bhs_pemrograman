@@ -5,3 +5,4 @@ redis/
 mysql/
 performance_schema/
 data/
+src/
