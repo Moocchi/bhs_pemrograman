@@ -6,3 +6,6 @@ mysql/
 performance_schema/
 data/
 src/
+db/
+nginx/
+php/
