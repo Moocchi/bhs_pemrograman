@@ -1,0 +1,3 @@
+# GUI Dalam Python
+
+GUI (Graphical User Interface) dalam Python adalah antarmuka pengguna grafis yang memungkinkan pengguna untuk berinteraksi dengan program melalui elemen visual seperti tombol, kotak teks, label, dan lain-lain. Ada beberapa pustaka yang dapat digunakan untuk membuat GUI di Python, termasuk Tkinter, PyQt, wxPython, dan lainnya. Salah satu pustaka yang paling umum digunakan adalah Tkinter karena sudah termasuk dalam distribusi standar Python.

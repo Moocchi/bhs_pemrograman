@@ -35,3 +35,7 @@ $router->group(['prefix' => 'api/v1/perpustakaan','middleware'=>'auth'], functio
     $router->put('/{id}', ['uses' => 'PerpustakaanController@edit']);
     $router->delete('/{id}', ['uses' => 'PerpustakaanController@destroy']);
 });
+
+$router->group(['prefix' => 'api/v1/perpustakaan'], function() use ($router){
+    $router->get('/', ['uses' => 'PerpustakaanController@index']);
+});
