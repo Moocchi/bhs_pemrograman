@@ -93,5 +93,3 @@ Kinerja Sistem Backend Perpustakaan
 | Jenis Layanan | Layanan CRUD Data Perpustakaan|
 | Definisi |  Layanan crud ini adalah untuk Mempermudah Pustakawan  untuk mendata Buku di perpustakaan, misalkan ada perubahan Harga atau Lokasi bisa diupdate lewat CRUD ini |
 | Abstrak (Narasi)  | Layanan sistem CRUD ini dirancang untuk mempermudah Pustakaawan dalam mendata buku melalui sistem CRUD ini. Pustakawan dapat dengan mudah menambahkan data buku baru, menghapus data buku yang sudah tidak tersedia, serta memperbarui informasi buku yang ada, seperti perubahan status pinjaman atau penambahan edisi baru. Sistem ini memberikan fleksibilitas dan efisiensi dalam mengelola data buku, sehingga proses aktivitas perpustakaan dapat selalu memiliki data yang terkini dan akurat.
-
-# Penjelasan Fungsi
